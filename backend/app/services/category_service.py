@@ -5,7 +5,7 @@ from app.schemas.category import CategoryResponseSchema, CategoryCreateSchema
 from fastapi import HTTPException, status
 
 
-class CatgoryServices:
+class CatgoryService:
     def __init__(self, db: Session):
         self.repostiry = CategoryRepository(db)
 
