@@ -12,5 +12,5 @@ class CategoryCreateSchema(CategoryBaseSchema):
 class CategoryResponseSchema(CategoryBaseSchema):
     id: int = Field(..., description="Inque category identifier")
 
-class ConfigSchema:
-    form_attributes = True
+    class Config:
+        from_attributes = True

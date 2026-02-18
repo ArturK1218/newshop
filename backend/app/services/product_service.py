@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 from typing import List
-from app.repositories.product_repository import ProductRepsitory
+from app.repositories.product_repository import ProductRepository
 from app.repositories.category_repository import CategoryRepository
 from app.schemas.product import ProductResponseSchema, ProductListResponseSchema, ProductCreateSchema
 from fastapi import HTTPException, status
@@ -8,7 +8,7 @@ from fastapi import HTTPException, status
 
 class ProductService:
     def __init__(self, db: Session):
-        self.product_repositry = ProductRepsitory(db)
+        self.product_repositry = ProductRepository(db)
         self.category_repository = CategoryRepository(db)
 
     def get_all_products(self) -> ProductListResponseSchema:
