@@ -216,3 +216,4 @@ __marimo__/
 .streamlit/secrets.toml
 
 seed_database.py
+shop.db
